@@ -86,9 +86,10 @@ public class SwiftAmazonS3CognitoPlugin: NSObject, FlutterPlugin {
                                  let extention = String(fileName![index!...])
                                  print("extension"+extention);
                                  if(extention.lowercased().contains("png") ||
-                                 extention.lowercased().contains("jpg") ||
                                      extention.lowercased().contains("jpeg") ){
                                      contentType = "image/"+extention
+                                 }else if(extention.lowercased().contains("jpg")){
+                                    contentType = "image/jpeg"
                                  }else{
 
                                   if(extention.lowercased().contains("pdf")){
